@@ -1,0 +1,11 @@
+{
+  "name": "syndicate.berlin",
+  "homepage": "https://github.com/syndicateberlin/syndicate.berlin",
+  "private": true,
+  "dependencies":
+  {
+    "reset-scss": "*",
+    "bourbon": "~4.2.3",
+    "garnish": "~0.2.1"
+  }
+}

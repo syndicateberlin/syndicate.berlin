@@ -1,0 +1,8 @@
+title: The Syndicate
+description: A friendly community of creative types based in Berlin.
+destination: public
+exclude: ['bower.json', 'CNAME']
+sass:
+  load_paths:
+    - _sass
+    - _bower
