@@ -1,0 +1,28 @@
+$gutter: 1.5em;
+$spacing: 1.5em;
+
+.cols {
+  margin-top: $spacing;
+}
+.col {
+  margin-bottom: $spacing;
+}
+
+@include media-from($bp-s) {
+  .cols {
+    @include clearfix;
+    margin-left:  -$gutter/2;
+    margin-right: -$gutter/2;
+  }
+
+  .col {
+    display: block;
+    float: left;
+    padding-left:  $gutter/2;
+    padding-right: $gutter/2;
+  }
+
+  .width-1\/2 { width: percentage(1/2); }
+  .width-1\/3 { width: percentage(1/3); }
+  .width-2\/3 { width: percentage(2/3); }
+}

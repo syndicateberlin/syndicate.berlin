@@ -1,0 +1,168 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 22px;
+  font-weight: weight(light);
+}
+
+body {
+  font-family: "leitura-news", sans-serif;
+  padding: 1.5em 3em;
+  max-width: 36em;
+  line-height: 1.25;
+}
+
+input, textarea, button {
+  font-family: "leitura-news", sans-serif;
+  font-size: 1em;
+}
+
+h1 {
+  font-weight: weight(bold);
+  margin-bottom: 1em;
+  margin-top: .5em;
+  font-size: 4.5em;
+  line-height: 1.1;
+}
+
+h1:before {
+  content: "";
+  display: block;
+  width: 1.5em;
+  height: .1em;
+  margin-bottom: .5em;
+}
+
+h2 {
+  font-weight: weight(bold);
+  font-size:   1.2em;
+  margin-top:    2.5em;
+  margin-bottom: 1.5em;
+}
+
+h2:before {
+  content: "";
+  display: block;
+  width: 1.5em;
+  height: .15em;
+  margin-bottom: .75em;
+}
+
+ul, p {
+  margin-bottom: 1em;
+}
+
+p {
+  line-height: 1.4;
+}
+
+ul {
+  list-style-type: disc;
+  @include media-upto($bp-m) {
+    padding-left: 1em; 
+  }
+}
+
+li {
+  line-height: 1.4;
+  margin-bottom: .2em;
+}
+
+strong {
+  font-weight: weight(semibold);
+}
+em {
+  font-style: italic;
+}
+
+p.intro {
+  font-size: 1.4em;
+  margin-bottom: 2.5em;
+  font-weight: weight(regular);
+  strong {
+    font-weight: weight(bold);
+  }
+}
+
+body      { background: white; }
+h1        { color: $c-orange; }
+h1:before { background: $c-orange; }
+body      { color: gray(20%); }
+p.intro   { color: gray(20%); }
+h2        { color: $c-orange; }
+h2:before { background: $c-orange; }
+a         {
+  color: $c-orange;
+  text-decoration: underline;
+  &:hover, &:focus {
+    color: black;
+    outline: none;
+  }
+}
+
+form {
+  label { display: block; }
+  input, textarea {
+    display: block;
+    width: 100%;
+  }
+  p {
+    margin-bottom: 1.5em;
+  }
+  input, textarea {
+    @include appearance(none);
+    border: none;
+    background: #FFF7F5;
+    border-radius: 5px;
+    border: solid 2px #FFF7F5;
+    padding: .5em;
+    outline: none;
+    color: gray(20%);
+    @include placeholder {
+      color: darken(#FFF7F5, 15%);
+    }
+    &:focus {
+      border-color: $c-orange;
+    }
+  }
+  label[for] {
+    font-size: .85em;
+    color: $c-orange;
+    font-weight: weight(semibold);
+    display: inline-block;
+    margin-bottom: .5em;
+  }
+  input + label, textarea + label {
+    color: gray(70%);
+    font-size: .75em;
+    font-weight: weight(light);
+    margin-top: .5em;
+    line-height: 1.2;
+    display: block;
+  }
+  .form-hidden {
+    position: absolute;
+    left: -9999em;
+  }
+  .form-actions {
+    text-align: right;
+  }
+  button {
+    @include appearance(none);
+    background: $c-orange;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    font-weight: weight(bold);
+    line-height: 1;
+    padding: .75em;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    &:hover, &:focus {
+      background: black;
+    }
+  }
+}
