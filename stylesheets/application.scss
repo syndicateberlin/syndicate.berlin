@@ -1,9 +1,9 @@
 ---
 ---
-@import 'bourbon/app/assets/stylesheets/bourbon';
-@import 'garnish/src/garnish';
+@import 'bourbon/bourbon';
+@import 'garnish/garnish';
 @import 'reset-scss/reset';
 @import 'settings';
-@import 'layout';
-@import 'base';
-@import 'responsive';
+@import 'application/layout';
+@import 'application/base';
+@import 'application/responsive';
